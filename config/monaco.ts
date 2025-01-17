@@ -1,3 +1,11 @@
+declare global {
+  interface Window {
+    MonacoEnvironment: {
+      getWorkerUrl: (moduleId: string, label: string) => string;
+    };
+  }
+}
+
 import { loader } from '@monaco-editor/react'
 
 const monacoConfig = () => {
