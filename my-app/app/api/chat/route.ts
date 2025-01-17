@@ -44,7 +44,7 @@ Use your best judgment to maintain a balanced and productive conversation while 
     })
 
     if (!response.ok) {
-      const errorData = await res.json()
+      const errorData = await response.json()
       throw new Error(`OpenAI API error: ${errorData.error?.message || response.statusText}`)
     }
 
